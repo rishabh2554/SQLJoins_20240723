@@ -1,0 +1,41 @@
+1. Inner Join Question
+o Write an SQL query to find the names of employees who work in the 'Engineering'
+department.
+
+select a.emp_id,a.name,d.dept_name from employees a inner join departments d
+      on a.dept_id = d.dept_id
+      and d.dept_name='Engineering'
+	  
+	  
+	  
+
+2. Left Join Question
+o Write an SQL query to list all employees and their respective department names. If an
+employee does not belong to any department, still include their name in the result.
+
+select a.emp_id,a.name, d.dept_name from employees a left join departments d
+      on a.dept_id = d.dept_id
+
+3. Right Join Question
+o Write an SQL query to find all departments and the names of employees who belong to
+them. If a department does not have any employees, still include the department name
+in the result.
+
+select a.emp_id, a.emp_id,a.named.dept_name from employees a right join departments d
+      on a.dept_id = d.dept_id
+
+4. Full Join Question
+o Write an SQL query to list all employees and all departments. Include employees who do
+not belong to any department and departments that do not have any employees.
+
+select a.named.dept_name from employees a full outer join departments d
+      on a.dept_id = d.dept_id
+
+
+5. Self Join Question
+Given the employees and departments tables, write a SQL query to find pairs of
+employees who work in the same department.
+select a.emp_id,a.name, b.emp_id,b.name from employees a inner join employees b
+on a.emp_id <> b.emp_id and a.dept_id = b.dept_id and a.emp_id > b.emp_id
+
+
